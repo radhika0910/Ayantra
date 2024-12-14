@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "387138014774",
+    "project_id": "ayantrauser",
+    "storage_bucket": "ayantra.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387138014774:android:c798c3b1af0fc5c51bd297",
+        "android_client_info": {
+          "package_name": "com.example.ayantrauser"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPcnowh4264p-6EfRbP2LEc-vn9-baQAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
