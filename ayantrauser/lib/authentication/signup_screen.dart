@@ -1,6 +1,4 @@
 import 'package:ayantrauser/authentication/signin_screen.dart';
-import 'package:ayantrauser/screens/personal_details_screen.dart'; // Create this screen
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -21,13 +19,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Future<void> registerUser() async {
     final email = emailTextEditingController.text.trim();
     final password = passwordTextEditingController.text.trim();
-    final userName = userNameTextEditingController.text.trim();
-    final phone = userPhoneTextEditingController.text.trim();
 
-    if (email.isEmpty ||
-        password.isEmpty ||
-        userName.isEmpty ||
-        phone.isEmpty) {
+    if (email.isEmpty || password.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Please fill in all fields.")),
       );
@@ -35,31 +28,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
     }
 
     try {
-      // Create user in Firebase Auth
-      UserCredential userCredential = await FirebaseAuth.instance
+      await FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: email, password: password);
-
-      // Get the unique user ID
-      String uid = userCredential.user!.uid;
-
-      // Save user data to Firestore
-      await FirebaseFirestore.instance.collection('users').doc(uid).set({
-        'uid': uid,
-        'email': email,
-        'name': userName,
-        'phone': phone,
-        'type': 'user', // Default column for user type
-        'createdAt': FieldValue.serverTimestamp(),
-      });
-
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Account created successfully!")),
       );
-
-      // Navigate to the personal details screen
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const PersonalDetailsScreen()),
+        MaterialPageRoute(builder: (context) => const SignInScreen()),
       );
     } on FirebaseAuthException catch (e) {
       // Handle Firebase-specific errors
@@ -111,12 +87,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       controller: emailTextEditingController,
                       decoration:
                           const InputDecoration(labelText: "User Email"),
-                      style: const TextStyle(color: Colors.grey, fontSize: 15),
-                    ),
-                    const SizedBox(height: 22),
-                    TextField(
-                      controller: userPhoneTextEditingController,
-                      decoration: const InputDecoration(labelText: "Phone"),
                       style: const TextStyle(color: Colors.grey, fontSize: 15),
                     ),
                     const SizedBox(height: 22),
