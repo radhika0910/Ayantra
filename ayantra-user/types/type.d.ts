@@ -46,6 +46,7 @@ declare interface Ride {
   driver_id: number;
   user_id: string;
   created_at: string;
+  status:boolean;
   driver: {
     first_name: string;
     last_name: string;
