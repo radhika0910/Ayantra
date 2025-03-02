@@ -3,6 +3,7 @@ import { neon } from "@neondatabase/serverless";
 export async function GET(request: Request, context: { params: { id?: string } }) {
     const id = context.params?.id; // Extract the id safely
 
+
     if (!id) {
         return new Response(JSON.stringify({ error: "Missing required fields" }), {
             status: 400,

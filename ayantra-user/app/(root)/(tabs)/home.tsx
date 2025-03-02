@@ -33,6 +33,8 @@ const Home = () => {
   };
 
   const [hasPermission, setHasPermission] = useState<boolean>(false);
+console.log("User object:", user);
+console.log("User ID:", user?.id);
 
   const {
     data: recentRides,
@@ -91,7 +93,7 @@ const Home = () => {
                 <Image
                   source={images.noResult}
                   className="w-40 h-40"
-                  alt="No recent rides found"
+                  alt="No  rides found"
                   resizeMode="contain"
                 />
                 <Text className="text-sm">No recent rides found</Text>

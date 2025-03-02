@@ -1,6 +1,6 @@
 import { useAuth } from "@clerk/clerk-expo";
 import { useStripe } from "@stripe/stripe-react-native";
-import { router } from "expo-router";
+import { Href, router } from "expo-router";
 import React, { useState } from "react";
 import { Alert, Image, Text, View } from "react-native";
 import { ReactNativeModal } from "react-native-modal";
@@ -147,13 +147,13 @@ const Payment = ({
           </Text>
 
           <CustomButton
-            title="Back Home"
-            onPress={() => {
-              setSuccess(false);
-              router.push("/(root)/(tabs)/home");
-            }}
-            className="mt-5"
-          />
+  title="Back Home"
+  onPress={() => {
+    setSuccess(false);
+    router.push("/(root)/driverlocation" as Href<string | object>);
+  }}
+  className="mt-5"
+/>
         </View>
       </ReactNativeModal>
     </>

@@ -8,13 +8,16 @@ import { useFetch } from "@/lib/fetch";
 import { Ride } from "@/types/type";
 
 const Rides = () => {
-  const { user } = useUser();
+  const { user, isLoaded } = useUser();
 
-  const {
-    data: recentRides,
-    loading,
-    error,
-  } = useFetch<Ride[]>(`/(api)/ride/${user?.id}`);
+  if (!isLoaded) {
+    return <ActivityIndicator size="large" color="#000" />;
+  }
+
+  // console.log("This is user ID:", user?.id); // Ensure this logs correctly
+
+  const { data: recentRides, loading, error } = useFetch<Ride[]>(`/(api)/ride/${user?.id}`);
+ useFetch<Ride[]>(`/(api)/ride/${user?.id}`);
 
   return (
     <SafeAreaView className="flex-1 bg-white">
