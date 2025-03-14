@@ -13,10 +13,10 @@
   </div>
 
 
-<h3 align="center">Full Stack Uber Clone</h3>
+<h3 align="center">Ayntra Driver</h3>
 
    <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
+    If still the steps are unclear you can get the setup from the this YouTube link!! <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>
     </div>
 </div>
 
@@ -33,25 +33,17 @@
 
 ## 🚨 Tutorial
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube
-channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
-
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects
-like these step-by-step in a beginner-friendly manner!
-
-<a href="https://youtu.be/kmy_YNhl0mw" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
-
 ## <a name="introduction">🤖 Introduction</a>
 
 Built with React Native for handling the user interface, Google Maps for rendering maps with directions, stripe for
-handling payments, serverless Postgres for managing databases, and styled with TailwindCSS, Uber Clone is a perfect
+handling payments, serverless Postgres for managing databases, and styled with TailwindCSS, ayantra-driver Clone is a perfect
 mobile app. The primary goal is to demonstrate how to develop full-stack mobile applications to showcase the developer's
 skills in a unique manner that creates a lasting impact.
 
 If you're getting started and need assistance or face any bugs, join our active Discord community with over **34k+**
 members. It's a place where people help each other out.
 
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
+<!-- <a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a> -->
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
@@ -113,8 +105,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/JavaScript-Mastery-Pro/uber.git
-cd uber
+git clone  https://github.com/radhika0910/Ayantra.git
+cd ayantra-driver
 ```
 
 **Installation**
@@ -126,6 +118,7 @@ npm install
 ```
 
 **Set Up Environment Variables**
+<!-- {Already done in yout case } -->
 
 Create a new file named `.env` in the root of your project and add the following content:
 
@@ -137,7 +130,7 @@ EXPO_PUBLIC_DIRECTIONS_API_KEY=
 
 DATABASE_URL=
 
-EXPO_PUBLIC_SERVER_URL=https://uber.dev/
+EXPO_PUBLIC_SERVER_URL=https://ayantra-driver.dev/
 
 EXPO_PUBLIC_GEOAPIFY_API_KEY=
 

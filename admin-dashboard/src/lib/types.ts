@@ -35,6 +35,8 @@ export interface Driver {
     name: string;
     email: string;
     clerk_id: string;
+    role: string;
+    verified:  boolean;
   }
   
   export interface DashboardStats {

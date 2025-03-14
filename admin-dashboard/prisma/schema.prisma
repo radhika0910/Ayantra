@@ -43,4 +43,6 @@ model users {
   email     String  @unique @db.VarChar(100)
   clerk_id  String  @unique @db.VarChar(50)
   rides     rides[]
+  role      String  @db.VarChar(50)
+  verified  Boolean?
 }
