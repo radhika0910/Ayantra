@@ -4,6 +4,7 @@ import MapView, { Marker, Polyline, PROVIDER_GOOGLE } from "react-native-maps";
 import * as Location from "expo-location";
 import { neon } from "@neondatabase/serverless";
 import { Ionicons } from '@expo/vector-icons'; // Import Ionicons for the reload icon
+import { useUser, useAuth } from "@clerk/clerk-expo";
 
 // Define the Ride type
 type Ride = {
@@ -33,9 +34,9 @@ const HomeScreen = () => {
   const fetchIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const mapRef = useRef<MapView | null>(null);
   const updateLocationIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const { user } = useUser();
+  const driverId = user?.id; 
 
-  // Define the driverId (replace with actual logic to get the logged-in driver's ID)
-  const driverId =4; // Example driver ID, replace with actual logic
 
   const fetchLatestRide = async () => {
     try {

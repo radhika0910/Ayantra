@@ -3,6 +3,7 @@ import { Image, ScrollView, Text, View, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import InputField from "@/components/InputField";
 import { router } from "expo-router";
+import React from "react";
 
 const Profile = () => {
   const { user } = useUser();
