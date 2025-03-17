@@ -6,8 +6,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Uber Clone Admin Dashboard',
-  description: 'Admin dashboard for Uber clone application',
+  title: 'Ayantra Admin Dashboard',
+  description: 'Admin dashboard for Ayantra application',
 };
 
 export default function RootLayout({
